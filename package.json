@@ -4,7 +4,9 @@
   "description": "Organization chart, created with d3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel serve src/assets/index.html",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url .",
+    "watch": "parcel watch src/assets/index.html"
   },
   "repository": {
     "type": "git",
@@ -16,13 +18,18 @@
     "hierarchy",
     "employee"
   ],
-  "dependencies": {
-    "d3": "*"
-  },
   "author": "David B.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bumbeishvili/d3-organization-chart/issues"
   },
-  "homepage": "https://github.com/bumbeishvili/d3-organization-chart#readme"
+  "homepage": "https://github.com/bumbeishvili/d3-organization-chart#readme",
+  "dependencies": {
+    "d3": "^4.13.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^4.13.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
 }
